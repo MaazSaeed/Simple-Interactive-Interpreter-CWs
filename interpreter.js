@@ -15,8 +15,6 @@ class Interpreter {
     if(tokens.length == 0)
       return '';
     
-    
-    
     let len = tokens.length;
     for(let i = 0; i < len; i++)
     {
@@ -68,36 +66,29 @@ class Interpreter {
     
     let res = [];
     
-    if(queue.length == 1)
-      if(queue[0] == 'y')
-        throw "error";
-    
     for(let q of queue)
     {
+      
       if(q >= 'a' && q <= 'z')
         res.push(q)
       else if(isNaN(q))
       {
         let a = res.pop();
         let b = res.pop();
-        
-        if(a == undefined || b == undefined)
-          throw "error";
-        
-        if(this.vars.hasOwnProperty(a))
-        {
-          throw "error";
-          continue;
-        }
-        
+                
         res.push(ops[q](a, b));
       }
       else
         res.push(q);
+      
     }
 
     let z = res.pop();
-    return isNaN(z) ? this.vars[z] : z;
+    
+    if(z >= 'a' && z < 'z')
+      throw "error";
+    
+    return z;
   }
 }
 
@@ -117,5 +108,4 @@ function precedence(op)
       case '=':
       return 0;
   }
-  
 }
