@@ -2,23 +2,25 @@
 
 This was a fun little interpreter I made using the Shunt Yard Algorithm for the parsing. You can find the kata [here](https://www.codewars.com/kata/53005a7b26d12be55c000243/train/javascript) for more details.
 
- # Grammar for the interpreter using EBNF syntax.
+
+ ### Grammar for the interpreter using EBNF syntax.
  
-***expression      ::= factor | expression operator expression***
+`expression      ::= factor | expression operator expression`
 
-***factor          ::= number | identifier | assignment | '(' expression ')'***
+`factor          ::= number | identifier | assignment | '(' expression ')'`
 
-***assignment      ::= identifier '=' expression***
+`assignment      ::= identifier '=' expression`
 
-***operator        ::= '+' | '-' | '*' | '/' | '%'***
+`operator        ::= '+' | '-' | '*' | '/' | '%'`
 
-***identifier      ::= letter | '_' { identifier-char }***
+`identifier      ::= letter | '_' { identifier-char }`
 
-***identifier-char ::= '_' | letter | digit***
+`identifier-char ::= '_' | letter | digit`
 
-***number          ::= { digit } [ '.' digit { digit } ]***
+`number          ::= { digit } [ '.' digit { digit } ]`
 
-***letter          ::= 'a' | 'b' | ... | 'y' | 'z' | 'A' | 'B' | ... | 'Y' | 'Z'***
+`letter          ::= 'a' | 'b' | ... | 'y' | 'z' | 'A' | 'B' | ... | 'Y' | 'Z'`
 
-***digit           ::= '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'***
+`digit           ::= '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'`
+
 
