@@ -1,6 +1,6 @@
 # Simple Interactive Interpreter
 
-This was a fun little interpreter I made using the Shunt Yard Algorithm for the parsing. You can find the kata [here](https://www.codewars.com/kata/53005a7b26d12be55c000243/train/javascript) for more details.
+This was a fun little interpreter I made using the Shunt Yard Algorithm for the parsing.
 
 
  ### Grammar for the interpreter using EBNF syntax.
